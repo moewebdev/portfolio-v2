@@ -1,0 +1,108 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Form from '../components/ContactForm.astro'; 
+
+---
+
+<Layout title="Moses McKnight - Software Developer | Graphic Designer">
+	<main>
+		<div class="about-section">
+			<div class="img-container">
+				<!--<img src="#" alt="full-stack developer moses smiling at the camera" />--> 
+			</div>
+			<h2>👋🏾 Hello! I'm Moses</h2>
+			<p>
+				I'm a fullstack developer and designer that is passionate about
+				helping businesses achieve their goals through technology and design. 
+			</p>
+			<p>
+				Currently, I am working on a rebuild and redesign of this site. It will 
+				be back soon with new and exciting features! In the meantime, feel free to 
+				reachout through my social links above or the contact form below!
+			</p>
+		</div>
+
+		<div class="contact-section">
+			<h2>👨🏾‍💻 Get in touch</h2>
+			<p>
+				Interested in working together? Fill out the form below and 
+				I'll get back to you as soon as possible!
+			</p>
+		
+			<Form /> 
+		</div>
+		<footer>
+			©mosesmcknight2023
+	   </footer>
+	</main>
+</Layout>
+
+<style>
+	main{
+		color: #f2f2f2;
+		font-size: 18px;
+		background-color:rgba(28,34,54, 0.9); 
+		margin: 0 auto; 
+		padding: 72px 24px 24px 24px;
+		
+	}
+
+	.about-section,
+	.contact-section{
+
+		margin-left: auto; 
+		margin-right: auto; 
+		margin-bottom: 72px; 
+		
+	}
+
+	.about-section p:nth-of-type(1){
+		margin-bottom: 24px;
+	}
+
+	.contact-section p{
+		margin-bottom: 24px; 
+	}
+
+	.img-container{
+		width: 216px; 
+		height: 216px; 
+		background-color: #efefef;
+		border-radius: 100%;
+		margin-bottom: 24px; 
+	}
+
+	h2{
+		font-family: 'Poppins', sans-serif;
+		font-size: 2rem;
+	}
+
+	p{
+		font-family: 'Work sans';
+		max-width: 60ch;
+	}
+
+	footer{
+		text-align: center;
+		color: #f2f2f2;
+		font-size: 12px;
+	}
+
+
+	/* Medium Screens */
+	@media screen and (min-width: 768px){
+		.about-section,
+		.contact-section{
+			width: 75%; 
+		}
+	}
+
+
+	/* Large Screens */
+	@media screen and (min-width: 992px){
+		.about-section,
+		.contact-section{
+			width: 50%; 
+		}
+	}
+</style>

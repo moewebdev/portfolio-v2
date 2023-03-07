@@ -1,0 +1,48 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />--> 
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	*{
+		margin: 0; 
+		padding: 0;
+		box-sizing: border-box;
+	}
+	
+	:root{
+		--accent-font: 'Poppins', sans-serif; 
+		--base-font: 'Work sans', sans-serif; 
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+
+	body{
+		font-size: 16px;
+		line-height: 1.5;
+		background-image: url('../assets/images/clement-helardot-95YRwf6CNw8-unsplash.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+	}
+	
+</style>
