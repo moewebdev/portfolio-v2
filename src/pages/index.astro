@@ -5,101 +5,116 @@ import Form from '../components/ContactForm.astro';
 ---
 
 <Layout title="Moses McKnight - Software Developer | Graphic Designer">
-	<main>
-		<div class="about-section">
-			<div class="img-container">
-				<!--<img src="#" alt="full-stack developer moses smiling at the camera" />--> 
-			</div>
-			<h2>👋🏾 Hello! I'm Moses</h2>
-			<p>
-				I'm a fullstack developer and designer that is passionate about
-				helping businesses achieve their goals through technology and design. 
-			</p>
-			<p>
-				Currently, I am working on a rebuild and redesign of this site. It will 
-				be back soon with new and exciting features! In the meantime, feel free to 
-				reachout through my social links above or the contact form below!
-			</p>
-		</div>
+	<div class="bg-overlay">
+		<main>
+			<section class="about-section">
+				<div class="img-container">
+					<!--<img src="#" alt="full-stack developer moses smiling at the camera" />--> 
+				</div>
+				<h2>👋🏾 Hello! I'm Moses</h2>
+				<p>
+					I'm a fullstack developer and designer that is passionate about
+					helping businesses achieve their goals through technology and design. 
+				</p>
+				<p>
+					Currently, I am working on a rebuild and redesign of this site. It will 
+					be back soon with new and exciting features! In the meantime, feel free to 
+					reachout through the social links or the contact form below!
+				</p>
+				<div class="social-container">
+					<div>
+						<!-- email icon -->
+						<a href="mailto:tmmwebdev@gmail.com">Email</a>
+					</div>
+					
+					<div>
+						<!-- github icon -->
+						<a href="https://github.com/moewebdev">Github</a>
+					</div>
 
-		<div class="contact-section">
-			<h2>👨🏾‍💻 Get in touch</h2>
-			<p>
-				Interested in working together? Fill out the form below and 
-				I'll get back to you as soon as possible!
-			</p>
-		
-			<Form /> 
-		</div>
+					<div>
+						<!-- linkedin icon  -->
+						<a href="https://www.linkedin.com/in/moses-mcknight-848b61267/">Linkedin</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact-section">
+				<h2>👨🏾‍💻 Get in touch</h2>
+				<p>
+					Interested in working together? Fill out the form below and 
+					I'll get back to you as soon as possible!
+				</p>
+			
+				<Form /> 
+			</section>
+			
+		</main>
 		<footer>
 			©mosesmcknight2023
-	   </footer>
-	</main>
+		</footer>
+	</div>
 </Layout>
 
 <style>
-	main{
-		color: #f2f2f2;
-		font-size: 18px;
-		background-color:rgba(28,34,54, 0.9); 
-		margin: 0 auto; 
-		padding: 72px 24px 24px 24px;
-		
-	}
-
+	/* -- Shared Styles -- */ 
 	.about-section,
 	.contact-section{
-
 		margin-left: auto; 
 		margin-right: auto; 
-		margin-bottom: 72px; 
-		
+		margin-bottom: var(--section-spacing); 
 	}
 
-	.about-section p:nth-of-type(1){
-		margin-bottom: 24px;
-	}
-
+	.about-section p,
 	.contact-section p{
-		margin-bottom: 24px; 
+		margin-bottom: 27px;
 	}
 
+	/* -- About Section -- */ 
 	.img-container{
 		width: 216px; 
 		height: 216px; 
-		background-color: #efefef;
+		background-color: var(--off-white);
 		border-radius: 100%;
-		margin-bottom: 24px; 
+		margin-bottom: 27px;
 	}
 
-	h2{
-		font-family: 'Poppins', sans-serif;
-		font-size: 2rem;
+	.social-container{
+		display: flex;
+		gap: 27px;
 	}
 
-	p{
-		font-family: 'Work sans';
-		max-width: 60ch;
+	.social-container a{
+		color: var(--off-white);
+		text-decoration: none;
+		border: 1px solid var(--off-white);
+		display: block;
+		padding: 9px 18px;
+		border-radius: 9px;
+		cursor: pointer;
+		font-weight: bold;
 	}
 
+	.social-container a:hover{
+		color: #1c2236; 
+		background-color: var(--off-white);
+	}
+	
+	/* -- Footer Section -- */ 
 	footer{
 		text-align: center;
-		color: #f2f2f2;
-		font-size: 12px;
+		padding: 27px; 
 	}
 
-
-	/* Medium Screens */
+	/* -- Media Queries -- */
 	@media screen and (min-width: 768px){
-		.about-section,
+		.about-section, 
 		.contact-section{
-			width: 75%; 
+			width: 75%;
 		}
 	}
 
-
-	/* Large Screens */
-	@media screen and (min-width: 992px){
+	@media screen and  (min-width: 992px){
 		.about-section,
 		.contact-section{
 			width: 50%; 
