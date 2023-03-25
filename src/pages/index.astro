@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Form from '../components/ContactForm.astro'; 
+import profile from '../assets/images/profile.jpg';
 
 ---
 
@@ -9,7 +10,7 @@ import Form from '../components/ContactForm.astro';
 		<main>
 			<section class="about-section">
 				<div class="img-container">
-					<!--<img src="#" alt="full-stack developer moses smiling at the camera" />--> 
+					<img src={profile} class="profile-img" alt="Moses - Software Developer & Graphic Designer" />
 				</div>
 				<h2>👋🏾 Hello! I'm Moses</h2>
 				<p>
@@ -74,9 +75,15 @@ import Form from '../components/ContactForm.astro';
 	.img-container{
 		width: 216px; 
 		height: 216px; 
-		background-color: var(--off-white);
 		border-radius: 100%;
 		margin-bottom: 27px;
+	}
+
+	.profile-img{
+		width: 100%;
+		height: auto;
+		display: block;
+		border-radius: 216px;
 	}
 
 	.social-container{
